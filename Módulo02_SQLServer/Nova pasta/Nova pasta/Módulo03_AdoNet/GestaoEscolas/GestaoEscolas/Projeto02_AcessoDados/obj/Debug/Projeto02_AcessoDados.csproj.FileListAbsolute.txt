@@ -1,0 +1,10 @@
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.csprojAssemblyReference.cache
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.Form1.resources
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.Properties.Resources.resources
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.csproj.GenerateResource.cache
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\bin\Debug\Projeto02_AcessoDados.exe.config
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\bin\Debug\Projeto02_AcessoDados.exe
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\bin\Debug\Projeto02_AcessoDados.pdb
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.exe
+C:\Users\ta0508\Documents\Sinquia_AspNet\Módulo03_AdoNet\GestaoEscolas\GestaoEscolas\Projeto02_AcessoDados\obj\Debug\Projeto02_AcessoDados.pdb

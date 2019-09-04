@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VendasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_CATEGORIAS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descicao" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_CLIENTES">
+    <Key>
+      <PropertyRef Name="Documento" />
+    </Key>
+    <Property Name="Documento" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Telefone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ITENS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Pedido" Type="int" Nullable="false" />
+    <Property Name="Id_Produto" Type="int" Nullable="false" />
+    <Property Name="Qualidade" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_PEDIDOS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Doc_Cliente" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Numero_Pedido" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_PRODUTOS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Categoria" Type="int" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unidade" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Foto" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Mime_Type" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__TB_ITENS__Id_Ped__1A14E395">
+    <End Role="TB_PEDIDOS" Type="Self.TB_PEDIDOS" Multiplicity="1" />
+    <End Role="TB_ITENS" Type="Self.TB_ITENS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PEDIDOS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TB_ITENS">
+        <PropertyRef Name="Id_Pedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_ITENS__Id_Pro__1B0907CE">
+    <End Role="TB_PRODUTOS" Type="Self.TB_PRODUTOS" Multiplicity="1" />
+    <End Role="TB_ITENS" Type="Self.TB_ITENS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PRODUTOS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TB_ITENS">
+        <PropertyRef Name="Id_Produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_PEDIDO__Doc_C__1273C1CD">
+    <End Role="TB_CLIENTES" Type="Self.TB_CLIENTES" Multiplicity="1" />
+    <End Role="TB_PEDIDOS" Type="Self.TB_PEDIDOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CLIENTES">
+        <PropertyRef Name="Documento" />
+      </Principal>
+      <Dependent Role="TB_PEDIDOS">
+        <PropertyRef Name="Doc_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_PRODUT__Id_Ca__173876EA">
+    <End Role="TB_CATEGORIAS" Type="Self.TB_CATEGORIAS" Multiplicity="1" />
+    <End Role="TB_PRODUTOS" Type="Self.TB_PRODUTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CATEGORIAS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TB_PRODUTOS">
+        <PropertyRef Name="Id_Categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VendasModelStoreContainer">
+    <EntitySet Name="TB_CATEGORIAS" EntityType="Self.TB_CATEGORIAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CLIENTES" EntityType="Self.TB_CLIENTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ITENS" EntityType="Self.TB_ITENS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PEDIDOS" EntityType="Self.TB_PEDIDOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PRODUTOS" EntityType="Self.TB_PRODUTOS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TB_ITENS__Id_Ped__1A14E395" Association="Self.FK__TB_ITENS__Id_Ped__1A14E395">
+      <End Role="TB_PEDIDOS" EntitySet="TB_PEDIDOS" />
+      <End Role="TB_ITENS" EntitySet="TB_ITENS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_ITENS__Id_Pro__1B0907CE" Association="Self.FK__TB_ITENS__Id_Pro__1B0907CE">
+      <End Role="TB_PRODUTOS" EntitySet="TB_PRODUTOS" />
+      <End Role="TB_ITENS" EntitySet="TB_ITENS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_PEDIDO__Doc_C__1273C1CD" Association="Self.FK__TB_PEDIDO__Doc_C__1273C1CD">
+      <End Role="TB_CLIENTES" EntitySet="TB_CLIENTES" />
+      <End Role="TB_PEDIDOS" EntitySet="TB_PEDIDOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_PRODUT__Id_Ca__173876EA" Association="Self.FK__TB_PRODUT__Id_Ca__173876EA">
+      <End Role="TB_CATEGORIAS" EntitySet="TB_CATEGORIAS" />
+      <End Role="TB_PRODUTOS" EntitySet="TB_PRODUTOS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

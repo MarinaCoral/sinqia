@@ -1,0 +1,25 @@
+﻿*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.center {
+    text-align:center;
+}
+
+.cabecalho {
+    margin: 20px;
+    padding: 20px;
+    background-color: darkred;
+}
+.conteudo {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+rodape{
+    background-color: gray;
+    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}

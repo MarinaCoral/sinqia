@@ -1,0 +1,20 @@
+﻿*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,h2 {
+    text-align:center;
+}
+
+.cabecalho {
+    margin: 20px;
+    padding: 20px;
+    background-color: darkred;
+}
+.conteudo {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

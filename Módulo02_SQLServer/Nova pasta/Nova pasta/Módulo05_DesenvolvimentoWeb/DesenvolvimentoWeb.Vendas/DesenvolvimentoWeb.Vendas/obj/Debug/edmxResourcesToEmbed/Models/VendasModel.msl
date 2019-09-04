@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VendasModelStoreContainer" CdmEntityContainer="VendasEntities">
+    <EntitySetMapping Name="CATEGORIAS">
+      <EntityTypeMapping TypeName="VendasModel.CATEGORIA">
+        <MappingFragment StoreEntitySet="TB_CATEGORIAS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descicao" ColumnName="Descicao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTES">
+      <EntityTypeMapping TypeName="VendasModel.CLIENTE">
+        <MappingFragment StoreEntitySet="TB_CLIENTES">
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITENS">
+      <EntityTypeMapping TypeName="VendasModel.ITEM">
+        <MappingFragment StoreEntitySet="TB_ITENS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Pedido" ColumnName="Id_Pedido" />
+          <ScalarProperty Name="Id_Produto" ColumnName="Id_Produto" />
+          <ScalarProperty Name="Qualidade" ColumnName="Qualidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEDIDOS">
+      <EntityTypeMapping TypeName="VendasModel.PEDIDO">
+        <MappingFragment StoreEntitySet="TB_PEDIDOS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Doc_Cliente" ColumnName="Doc_Cliente" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Numero_Pedido" ColumnName="Numero_Pedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUTOS">
+      <EntityTypeMapping TypeName="VendasModel.PRODUTO">
+        <MappingFragment StoreEntitySet="TB_PRODUTOS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Categoria" ColumnName="Id_Categoria" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Unidade" ColumnName="Unidade" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Mime_Type" ColumnName="Mime_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

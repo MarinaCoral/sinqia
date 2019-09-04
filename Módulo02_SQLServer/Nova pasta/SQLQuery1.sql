@@ -1,0 +1,24 @@
+IF EXISTS(SELECT * FROM sys.databases WHERE NAME='DB_EVENTOS') DROP DATABASE DB_EVENTOS
+GO
+
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE NAME='DB_CLINICA')
+
+BEGIN
+
+CREATE DATABASE DB_
+
+ON
+
+(
+NAME = ,
+FILENAME = 'C:\Users\ta0508\Documents\Sinquia_AspNet\Data\DB_CLINICA'
+) 
+
+LOG ON
+
+(
+NAME = ,
+FILENAME = 'C:\Users\ta0508\Documents\Sinquia_AspNet\Data\DB_CLINICA'
+
+END
+)
